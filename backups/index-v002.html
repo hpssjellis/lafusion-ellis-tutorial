@@ -1,0 +1,529 @@
+
+<h1>Maker100 Leaders Robotics: Full-Pipeline Control for La Fusion, By Jeremy Ellis</h1>
+
+Maker100 Leaders Robotics is the hands-on learning pathway behind this La Fusion tutorial. The course is at <a href="https://github.com/hpssjellis/maker100-leaders-robotics">https://github.com/hpssjellis/maker100-leaders-robotics</a><br>
+The webmcu-ai projects explore how to build and control the machine-learning pipeline. The repository is at <a href="https://github.com/webmcu-ai">https://github.com/webmcu-ai</a><br><br>
+
+<h2>At a glance: build the whole pipeline</h2>
+<ul>
+  <li><b>What it is:</b> a free, open-source, project-based pathway through robotics, sensors, microcontrollers, WebAI, TinyML and on-device machine learning. Students solve 40 to 60 real problems, then teach others what they learned.</li>
+  <li><b>Two ways to run it:</b> a pod of 3 to 7 advanced pre-engineering students inside a regular class, or a full course of 20 to 30 students, grades 9 to 12. The same core idea applies in either format: learn by building, testing and understanding complete systems.</li>
+  <li><b>Cost:</b> about $200 USD per student to start (one kit per student) plus about $50 USD per student each year for replacement parts and continued projects. <a href="https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html">Price list</a></li>
+  <li><b>Teacher support:</b> teachers do not need to be pipeline experts on day one. I touch base three times in year one: at the start, midway through the difficult problems, and near the end for direction on final projects.</li>
+  <li><b>Context:</b> this presentation connects practical Maker100 projects with La Fusion's wider interest in information fusion, sensor fusion and intelligent systems. Maker100 was also presented at the AI for Good Global Summit, Geneva, July 2026 (<a href="https://aiforgood.itu.int/event/the-maker100-leaders-robotics-framework/">session page</a>), and described in two open arXiv preprints (<a href="https://arxiv.org/abs/2604.23012">2604.23012</a>, <a href="https://arxiv.org/abs/2604.22834">2604.22834</a>).</li>
+  <li><b>Contact:</b> <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis on LinkedIn</a></li>
+</ul>
+<p>The presentation follows one central idea: if you do the coding yourself, you can control and inspect the entire pipeline. As AI tools improve, that control becomes more powerful—not less important.</p>
+
+
+
+<div id="myMain">
+
+
+<h1>Maker100 Leaders Robotics: From Sensors to Intelligent Systems — La Fusion Tutorial, By Jeremy Ellis</h1>
+
+<h3><a name="1" href="#1">1 </a> <br><br> Control the Whole Pipeline</h3>
+<h2>If you build the system yourself, you can find out exactly where it fails.</h2>
+
+<img height="415" alt="Image of a Red Wire on a breadboard with the xiao esp32s3" src="./media/slide-01-red-wire-v2.png" />
+
+<br><br><details open><summary><b>Understanding the whole system gives you more ways to diagnose and improve it.</b></summary>
+A robot system can fail in its wiring, sensor readings, data processing, model, communications or actuator code. If students build and understand each stage, they can test each possibility instead of guessing.<br><br>
+The same principle applies to AI. A black-box service may give an answer, but a developer who controls the pipeline can inspect the data, change the model, test assumptions, measure errors and decide where computation happens.<br><br>
+AI assistance is becoming more capable. That makes understanding and control more valuable: students can use AI to move faster while still checking, changing and owning the system they build.<br><br>
+La Fusion is a useful context for this systems view: intelligent behavior emerges from information, processing and decisions working together.
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="2" href="#2">2 </a> <br><br>A Learning Pathway, Not a Single Hardware Recipe</h3>
+<h2>Teach the same systems thinking through a small pod or a full course, using accessible hardware and open code.</h2>
+
+<img height="340" alt="Pod" src="./media/slide-02-two-ways.png" />
+
+<br><br><details open><summary><b>Start with the scale your school can support; keep the learning goals ambitious.</b></summary>
+
+<b>The Pod.</b> A small group of 3 to 7 advanced pre-engineering students works through the course inside a regular class. Each student builds on their own hardware, tests their own code, and teaches others. This creates room to explore how the parts of an intelligent system connect.<br><br>
+
+<b>The Full Course.</b> The same project-based pathway can become a full timetabled course for 20 to 30 students in grades 9 to 12.<br><br>
+
+<b>The cost, either way.</b> About $200 USD per student to start, plus tax, import duties and shipping, and about $50 USD per student each year for replacement parts. Every student gets their own kit so each learner gets hands-on control of the full build-and-test process. The hardware stays with the school for future students.<br><br>
+
+<b>The hardware.</b> In 2026 the microcontroller is the Seeed Studio XIAO ML Kit. The course is built around transferable abilities—not one board or brand: sensing, actuators, vision, sound and motion ML, communications, debugging and deployment. Hardware will change; understanding the pipeline is what lasts.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="3" href="#3">3 </a><br><br> Why I Build the Pipeline Myself</h3>
+<h2>I want students to become builders who understand and control the systems they use.</h2>
+
+<img height="440" alt="Who am I" src="./media/slide-03-who.png" />
+
+<br><br><details open><summary><b>I am Jeremy Ellis, a British Columbia technology teacher building open tools for WebAI, TinyML and robotics.</b></summary>
+  
+I founded the webmcu-ai GitHub organization to explore readable, open-source machine-learning pipelines, including on-device training and inference. I also co-chair the AIEng4D Show and Tell, where university students share TinyML and Edge AI projects.<br><br>
+My central message for this La Fusion tutorial is simple: when you write and understand the code yourself, you can control the entire pipeline—from raw sensor data through processing and model behavior to the final decision and physical action. AI coding assistants can help build that pipeline faster, but the ability to inspect and change it remains yours.<br><br>
+As AI improves, people who understand the system can use it as a more powerful collaborator instead of surrendering control to a black box.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3> <a name="4" href="#4">4 </a> <br><br> The Course: Build, Inspect and Improve Complete Systems.</h3>
+<h2>Open source, free, and designed to evolve as tools and hardware improve at <a href="https://github.com/hpssjellis/maker100-leaders-robotics">github.com/hpssjellis/maker100-leaders-robotics</a></h2>
+
+<img height="350" alt="Maker100 Leaders Robotics" src="./media/slide-04-course-v2.png" />
+
+<br><br><details open><summary><b>Students learn by building real systems, then investigating how each part contributes to the result.</b></summary>
+During Maker100, students solve 40–60 robotics, ML, sensor, actuator and IoT challenges, then teach others their solutions. The challenges let them build the pipeline one piece at a time: read a sensor, represent its data, write the processing code, test a model, communicate a result, and control an output.<br><br>
+A level 1 final project uses a single sensor, microcontroller and actuator. A level 2 project combines multiple sensors or actuators with machine learning and/or IoT.<br><br>
+Students collaborate but build and code on their own hardware. The point is not merely to make a demonstration work; it is to understand what each stage does and how changing one stage affects the whole system.
+
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3> <a name="5" href="#5">5 </a> <br><br> Problems, Not Black Boxes</h3>
+<h2>Each assignment is a problem to solve, test and explain—not just a recipe to follow.</h2>
+
+<img height="340" alt="Problems, Not Black Boxes" src="./media/slide-05-problems-not-manuals.png" /> 
+
+<br><br><details open><summary><b>AI can help write code, but you still need to understand what the code is doing.</b></summary>
+
+Maker100 gives students a problem and asks them to solve it with help from classmates, documentation, online examples and AI lab assistants.<br><br>
+
+When AI can generate code, the key skill is not typing every line from memory. It is defining the problem, understanding the generated code, checking assumptions, testing behavior and changing the implementation when it fails.<br><br>
+
+Building the pipeline yourself—or working through it line by line with AI assistance—gives you control over the choices: which data to collect, how to filter it, what features to calculate, which model to use, how to evaluate it and what happens when the model is uncertain.<br><br>
+
+The assignment remains useful as boards, libraries and AI tools change because the engineering question survives the technology. For example: <i>"Use sensor data to detect an approaching object and stop the robot before contact."</i>
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+
+
+<h3> <a name="6" href="#6">6 </a> <br><br>   Share the Understanding    </h3>
+<h2>   Explain the Pipeline to Others  </h2>
+
+<img height="445" alt="Share the Understanding" src="./media/slide-06-lead-three.png" />
+
+<br><br><details open><summary><b>If you are the first person to solve an assignment, you must teach three others.     </b></summary>
+  
+Share the Understanding is that those students who solve a problem teach three others, who then teach three more.
+The maximum mark of 90% rises toward 100% as classroom collaboration increases. <br>
+I'm completely comfortable with ten students earning 100%. 
+It hurts no one, and it transforms the tone, communication, confidence, and joy of the room.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3> <a name="7" href="#7">7 </a> <br><br> Own Your Part of the Pipeline</h3>
+<h2>Every student builds, codes and tests their own system—while sharing what they learn.</h2>
+
+<img height="340" alt="Own Your Part of the Pipeline" src="./media/slide-07-collaborative-and-seperate.png" /> 
+
+<br><br><details open><summary><b>Students can collaborate without giving up hands-on control.</b></summary>
+
+Students compare ideas, debug together and teach each other, but each student wires their own circuit, writes their own code and tests their own hardware.<br><br>
+
+That matters for the La Fusion theme: full-pipeline control is learned through direct contact with the complete system. Students should know where sensor data comes from, how it is transformed, how a model is used and what commands reach the hardware.<br><br>
+
+If the budget is tight, start with a smaller pod and one kit per student rather than a larger group sharing kits. Collaboration should multiply understanding, not replace individual experience.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+  
+<h3> <a name="8" href="#8">8 </a> <br><br>    The Analog Firewall: Verify Before Power   </h3>
+<h2>  Explain the code and draw the circuit before connecting power.   </h2>
+
+<img height="440" alt="The Analog Firewall: Verify Before Power" src="./media/slide-08-analog-firewall-v2.png" />
+
+<br><br><details open><summary><b>Think before you act. Paper before power.   </b></summary>
+
+The Analog Firewall asks students to pause before running code or powering hardware:<br><br>
+
+Code is summarized in plain language before loading it onto the microcontroller.<br>
+Circuit diagrams are drawn and checked before wiring.<br>
+Power is connected only after a second check.<br><br>
+
+This is also a lesson in system verification. AI can help generate code, but the student must explain what it should do, identify risky assumptions and test the result safely.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+  
+
+
+<h3> <a name="9" href="#9">9 </a><br><br> On-Device Machine Learning: Own the Pipeline</h3>
+<h2>From data to inference: build, inspect and deploy the machine-learning pipeline</h2>
+
+<img height="440" alt="On-Device Machine Learning: Own the Pipeline" src="./media/slide-09-ondevice-ml-v3.png" />
+
+<br><br><details open><summary><b>Compare using a ready-made service with building the pipeline yourself.</b></summary>
+
+A common workflow is to collect data, train a model with a framework or service, then deploy it to a microcontroller. Students can learn that workflow with tools such as Edge Impulse and SenseCraft.<br><br>
+The deeper question is: what changes when you understand and control every stage yourself? In my WebMCU-AI work, I explore readable pipelines for data collection, preprocessing, model structure, training, optimization, inference and deployment, including what can run directly on-device.<br><br>
+The point is not that every framework should be avoided. Frameworks are useful. The point is that a developer should have the option to inspect, change and test the pipeline rather than being limited to a hidden service. As AI coding assistants improve, they can help build more of the pipeline—but human control depends on being able to understand and verify it.<br><br>
+Inspired by Vijay Reddi's tinyTorch and <a href="https://mlsysbook.ai/">mlsysbook.ai</a>, I adapted this philosophy into Arduino-compatible code with help from LLMs. Papers: <a href="https://arxiv.org/abs/2604.23012">2604.23012</a> and <a href="https://arxiv.org/abs/2604.22834">2604.22834</a>.<br><br>
+Examples include vision classification, FOMO object detection, anomaly detection, sound classification, motion classification and regression inference. Building a reliable system takes iteration; my first WebSerial training system took 147 versions.
+
+</details>
+
+<br><br><br>
+<hr>
+
+<h3> <a name="10" href="#10">10 </a><br><br>  WebSerial: Connect Browser-Based AI to Real Hardware    </h3>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Demo: browser-based vision training and microcontroller inference</p>
+            <div id="myVid1" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/R--9WL-hWok?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/R--9WL-hWok/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+
+
+<br><br><br><br><br><br><br><br><br>
+<hr>  
+
+
+<h3> <a name="11" href="#11">11 </a> <br><br> Local AI as a Coding Partner, Not a Replacement</h3>
+<h2>AI assistants can help you build more—but understanding gives you control.</h2>
+
+<img height="370" alt="LLMs as lab assistants" src="./media/slide-11-local-ai-lab-assistants.png" />
+
+<br><br><details open><summary><b>Use AI to extend your ability to build, not to surrender ownership of the result.</b></summary>
+A local LLM can act as a coding and debugging assistant inside a student's own environment. Depending on the setup, work can remain local and private.<br><br>
+The deeper point is control. Students can ask AI to explain code, suggest tests, compare algorithms or help rewrite a section. They still need to decide what the system should do, inspect the code, run experiments and verify the behavior. As AI becomes better at coding, a person who understands the full pipeline can direct increasingly capable assistance toward a system they actually control.
+
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+<h3> <a name="12" href="#12">12 </a><br><br> Local LLM with Ollama: Assistance Without Giving Up Control   </h3>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Demo: use a local Ollama model from a webpage; Ollama must be installed</p>
+            <div id="myVid2" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/XMPbJGTGS-I?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/XMPbJGTGS-I/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+<h3> <a name="13" href="#13">13 </a><br><br>Local Gemma from a Web App   </h3>
+  
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Demo: local model running from a web app</p>
+            <div id="myVid3" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/EQROY5YoumI?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/EQROY5YoumI/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>  
+
+<h3> <a name="14" href="#14">14 </a><br><br> What Changes When Students Own the Work</h3>
+<h2>When students take ownership, they begin to trust their ability to solve difficult problems.</h2>
+
+<img height="435" alt="Stepping Back" src="./media/slide-14-stepping-back-v3.png" />
+
+<br><br><details open><summary><b>The teacher creates the conditions; students do the building, testing and explaining.</b></summary>
+When students have to build, debug and explain their own work, they discover that difficult systems can be understood one step at a time.<br><br>
+My goal is not to claim that a course creates a particular outcome. It is to create conditions where students can develop independence, persistence and confidence through real technical work.<br><br>
+AI is changing quickly. Students may feel they are competing with tools they cannot understand. Building complete systems gives them another relationship with AI: they can use it as a powerful assistant while retaining the ability to question, test and direct what it produces.
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3> <a name="15" href="#15">15 </a><br><br> Who Gets to Build Intelligent Systems?</h3>
+<h2>Understanding AI should not be reserved for people who already see themselves as engineers.</h2>
+
+<img height="360" alt="Who Gets to Build Intelligent Systems?" src="./media/slide-15-who-joins.png" />
+
+<br><br><details open><summary><b>This is a classroom observation, not a measured study.</b></summary>
+
+
+
+Robotics electives can draw students who already identify as technical, while others may not yet imagine themselves building intelligent systems. This is a classroom observation, not a measured study.<br><br>
+A small pod inside a regular class can invite a wider range of students to participate. The goal is for more people to gain enough practical understanding to ask good questions, evaluate AI and contribute to technical decisions.
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+
+
+
+<h3> <a name="16" href="#16">16 </a><br><br>  Teachers Matter: Guide the Process    </h3>
+<h2> The teacher does not need to know every answer.</h2>
+<img height="445" alt="Teachers matter" src="./media/slide-16-teachers-v3.png" />
+<br><br><details open><summary><b>Step back from being the only expert; stay present for safety, support and reflection.</b></summary>
+
+The teacher supports safe hardware use, helps students persist through setbacks, and asks questions that bring hidden assumptions into view. The teacher does not need to be the expert in every library, model or microcontroller.<br><br>
+This is especially important when students use AI coding assistants. The teacher can ask: What data enters the system? What does this function change? How do you know the model is correct? What happens when the sensor reading is noisy? Can you reproduce the result?<br><br>
+Hardware and AI tools will change. The lasting skills are defining a problem, understanding code, testing hypotheses, diagnosing failure and knowing what is happening inside the system. Support can be delivered in short, targeted conversations when students reach a real difficulty.
+
+</details>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3> <a name="17" href="#17">17 </a><br><br> Getting Started: Begin with One Complete System</h3>
+<h2>Start small. Build one working system, understand its pipeline, then extend it.</h2>
+
+<img height="360" alt="Getting Started: Begin with One Complete System" src="./media/slide-17-getting-started.png" />
+
+<br><br><details open><summary><b>A small pilot lets students and teachers learn the process before expanding it.</b></summary>
+What you need:
+
+At least three pre-engineers each semester willing to work hard <br>
+A pod is 3 to 7 students; a full course is 20 to 30 students, grades 9-12  <br>
+One kit per student, not shared <br>
+~$200 USD/student + tax + shipping to start; ~$50 USD/student/year for future research and replacement parts (yes, we break things) <br>
+A computer lab, ideally with a 3D printer <br>
+A teacher sponsor willing to guide, co-learn and check safety <br>
+A principal who supports it <br><br>
+
+<b>What it costs, for example:</b> a pod of seven is about $1,400 USD plus tax and shipping to start, then about $350 USD a year for parts. 
+The kits stay with the school, so each new group of students uses the same hardware.<br><br>
+
+I support each pod or class three times during year one: at the start (in person or by video) for safety and setup, 
+midway to work through the difficult problems, 
+and near the end for direction on the final projects (the Level 2 challenges).  <br>
+Teachers who are Arduino wizards with an Edge Impulse login may want to run independently and connect next year. <br>
+Hardware price list:  <a href="https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html"> https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html </a>
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="18" href="#18">18 </a> <br><br>Closing: Control Becomes More Powerful as AI Improves</h3>
+<h2>Start with one project. Build the whole pipeline.</h2>
+
+<img height="360" alt="Closing: Control Becomes More Powerful as AI Improves" src="./media/slide-18-closing.png" />
+
+<br><br><details open><summary><b>Use AI to build more, while keeping the ability to understand and control what you build.</b></summary>
+Some pods will struggle. Some students will build things none of us expected. 
+Start small, count what happens, and share it, so the next school can begin with evidence instead of a leap of faith. 
+The schools that succeed don't just celebrate their own wins; 
+they become the blueprint for those who couldn't start today.
+First, you build for your community. Then you lead for the world.
+We need the third student at the table. The voice no one expected. The person who sees the simple truth the experts miss. 
+I'm not arguing everyone becomes an AI engineer, I'm arguing everyone deserves enough understanding to participate in the future.
+The students who built something here aren't just more employable. They're less afraid.<br><br>
+If you are a teacher, principal or parent advisory council member and would like to try a pod, 
+message me on LinkedIn: <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">https://ca.linkedin.com/in/jeremy-ellis-4237a9bb</a><br><br>
+If you build the system yourself, you can find out exactly where it fails. Thank you.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="19" href="#19">19 </a><br><br> Links, Videos and Resources</h3>
+<h2>Explore the projects, code and demonstrations behind the tutorial.</h2>
+
+<br>
+QR code to this presentation:<br>
+<img height="445" alt="QR code, scan to open presentation" src="./media/slide-19-links-v3.png" />
+<br><br>
+
+<details open><summary><b>Resources</b></summary>
+
+<br>
+
+<li><a href="https://hpssjellis.github.io/maker100-leaders-robotics/">This Presentation Webpage</a></li>
+  <li><a href="https://lafusion.cos.ufrj.br/#bootcamp">LAFusion Bootcamp</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLHo7Bx0zIrrA">La Fusion / Maker100 Video Playlist</a></li>
+<li><a href="https://github.com/hpssjellis/maker100-leaders-robotics">Course: Github Maker100 Leaders Robotics</a></li>
+<li><a href="https://github.com/hpssjellis/maker100-curriculum">Maker100 Curriculum</a></li>
+<li><a href="https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html">Hardware Price List: 2026</a></li>
+  <br>
+<li><a href="https://github.com/webmcu-ai">Open-source WebAI and on-device ML framework: webmcu-ai</a></li>
+<li><a href="https://arxiv.org/abs/2604.23012">arXiv 2604.23012 Pre-Print Paper 1 on-device</a></li>
+<li><a href="https://arxiv.org/abs/2604.22834">arXiv 2604.22834 Pre-Print Paper 2 web Training Assist</a></li>
+<li><a href="https://aieng4d.mlsysbook.ai/community/show">AIEng4D Show and Tell</a></li>
+  <br>
+<li><a href="https://www.linkedin.com/in/jeremy-ellis-4237a9bb/">Jeremy Ellis LinkedIn</a></li>
+<li><a href="https://github.com/hpssjellis">Jeremy Ellis Github Profile</a></li>
+  
+<hr>
+
+  
+</details>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+<a name="resources">Resources</a>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Link / Details</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Author</strong></td>
+      <td> <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis LinkedIn Profile</a></td>
+      <td><em></em></td>
+    </tr>
+    <tr>
+      <td><strong>AI for Good Global Summit</strong></td>
+      <td><a href="https://aiforgood.itu.int/speaker/jeremy-ellis/">Speaker page</a> and <a href="https://aiforgood.itu.int/event/the-maker100-leaders-robotics-framework/">session page</a></td>
+      <td>In-person session, 8 July 2026, Geneva</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub Profile</strong></td>
+      <td><a href="https://github.com/hpssjellis">github.com/hpssjellis</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>On-Device webmcu-ai</strong></td>
+      <td><a href="https://github.com/webmcu-ai">github.com/webmcu-ai</a></td>
+      <td>arXiv Papers: <a href="https://arxiv.org/abs/2604.23012">2604.23012</a> &amp; <a href="https://arxiv.org/abs/2604.22834">2604.22834</a></td>
+    </tr>
+    <tr>
+      <td><strong>Browser-to-device vision ML demo</strong></td>
+      <td><a href="https://webmcu-ai.github.io/webmcu-vision-pwa/index.html">webmcu-vision-pwa</a></td>
+      <td>On-device and webSerial Vision ML Training demo webpage and PWA</td>
+    </tr>
+    <tr>
+      <td><strong>The Course</strong></td>
+      <td><a href="https://github.com/hpssjellis/maker100-leaders-robotics">maker100-leaders-robotics</a></td>
+      <td>Project-based robotics course that builds pipeline understanding</td>
+    </tr>
+    <tr>
+      <td><strong>The Curriculum</strong></td>
+      <td><a href="https://github.com/hpssjellis/maker100-curriculum">maker100-curriculum</a></td>
+      <td>This is the generic curriculum on Github</td>
+    </tr>
+    <tr>
+      <td><strong>Hardware Price List</strong></td>
+      <td><a href="https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html">Hardware price-list-2026</a></td>
+      <td>The bare essential hardware.</td>
+    </tr>
+    <tr>
+      <td><strong>Local LLM PWA Small ~2GB</strong></td>
+      <td>
+          <a href="https://webmcu-ai.github.io/local-gemma4-pwa/index.html">Gemma4:e2B PWA</a>
+      </td>
+      <td>Running as webpage PWAs</td>
+    </tr>
+    <tr>
+      <td><strong>Local LLM PWA Large ~7GB</strong></td>
+      <td>
+          <a href="https://webmcu-ai.github.io/ollama-gemma4-12b-pwa/index.html">Ollama Gemma4:12B PWA</a>
+      </td>
+      <td>Needs <a href="https://ollama.com/">Ollama</a> installed</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<h1> Course Planning Guide: Build, Understand and Control AI Systems</h1>
+
+<h3>Robotics 11: Build, Code, Create </h3>
+  
+Technology is changing quickly. People are better prepared when they can understand, test and adapt the systems they use—not just operate tools built by others.
+<br>
+AI is reshaping work across many fields. WebAI and TinyML make it possible to experiment with models in a browser and run useful inference on inexpensive hardware. When configured for local operation, systems can reduce reliance on cloud services and keep data closer to where it is collected. As AI coding tools improve, the ability to direct, inspect and test a complete pipeline becomes increasingly valuable.
+<br>
+In Robotics 11, you'll build and program hands-on electronics projects using sensors, microcontrollers, robotics, WebAI and on-device machine learning. You'll explore the pipeline from physical measurement to code, model output and action. You won't just use technology; you'll learn how to inspect and control it.
+<br>
+It starts with the Analog Firewall. Before power ever touches a board, you map the circuit and summarize the code on paper. If you can't explain it without the AI, you aren't ready to build it with the AI. You'll learn collaboratively through peer teaching, and every student builds and understands their own hardware.
+<br>
+AI is your assistant, not your replacement. Use it to help write and improve code, but verify what it produces. The course ends with a simple project and a more complex project that combines multiple system components.
+<br>
+Built to last. Boards and AI tools will change. The durable skills are defining a problem, reading a circuit, understanding code, testing a hypothesis, debugging a failure and knowing what is happening inside the machine.
+<br><br>
+<i><b>Mandatory for anyone with political aspirations, strongly recommended for all other leaders.</b></i>
+<br><br>
+<hr>
+<br>
+
+<h3>Robotics 12: Build a Robot That Works—and Explain Why </h3>
+<br>
+Robotics 11 develops the foundations. Robotics 12 asks you to integrate the pieces, handle failure and make a complete system work.
+<br>
+After completing the core assignments, you'll design, build and troubleshoot a project of your own. Combine electronics, sensors, code, machine learning, communications and actuators. Decide which parts to build directly and which libraries or AI tools to use, then make sure you understand how the components interact and how to test the whole pipeline.
+<br>
+This capstone-style course is about creativity, resilience, iteration, and leadership. Your first idea will probably fail. You'll learn to diagnose why, redesign, and keep going until it works. That habit helps separate people who can adapt to change from people who are caught off guard by it.
+<br>
+The goal isn't to use the most advanced technology. It's to understand it well enough to control, test and improve it.
+<br><br>
+<i><b>Define the problem. Build the pipeline. Test every stage. Use AI. Keep control.</b></i>
+<br><br>
+<hr>
+  
+
+
+  
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+</div>
