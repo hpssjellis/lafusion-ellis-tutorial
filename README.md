@@ -17,7 +17,7 @@ Sensor Fusion Tutorial By Jeremy Ellis
 7. Video 3: [my Github Organization WebMCU-AI](https://www.youtube.com/watch?v=unCKu32qVvg&list=PLHo7Bx0zIrrA&index=3&pp=iAQB)
 8. Video 4: [My High School Robotics AI IoT course Maker100 Leaders Robotics](https://www.youtube.com/watch?v=RvL4VTN949g&list=PLHo7Bx0zIrrA&index=4&pp=iAQB)
 9. *Video 5:* [Sensor Fusion with the Nano33BleSense and a webpage for ML training](https://www.youtube.com/watch?v=dSBqbDrsu90&list=PLHo7Bx0zIrrA&index=5&pp=iAQB) This is probably the most important of the videos as it is sensor fusion.
-10. Exit: My tools are not better than professional tools, and they might have some issues, but the entire pipeline is visible and students can take these starting points to make their own projects, products or solutions.
+10. Exit: My tools are not better than professional tools, and they might have some issues, but the entire pipeline is visible using single file firmware or webpages and students can take these starting points to make their own projects, products or solutions.
 
 ---
 
