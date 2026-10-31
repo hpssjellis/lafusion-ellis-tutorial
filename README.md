@@ -14,7 +14,7 @@ Sensor Fusion Tutoria
 9. Video 5: [Sensor Fusion with the Nano33BleSense and a webpage for ML training](https://www.youtube.com/watch?v=dSBqbDrsu90&list=PLHo7Bx0zIrrA&index=5&pp=iAQB) This is probably the most important of the videos as it is sensor fusion.
 10. Exit: My tools are not better than professional tools, and they might have some issues, but the entire pipeline is visible and students can take these starting points to make their own projects, products or solutions.
 
-
+---
 
 
 Or just go through the page at
