@@ -3,7 +3,7 @@ LA-Fusion Bootcamp Tutorial by Jeremy Ellis
 
 This page is at 
 
-<img width="483" height="485" alt="image" src="https://github.com/user-attachments/assets/278f9cd8-ce09-4971-a3af-5102d1b5181d" />
+<img width="243" height="244" alt="image" src="https://github.com/user-attachments/assets/278f9cd8-ce09-4971-a3af-5102d1b5181d" />
 
 
 Sensor Fusion Tutorial By Jeremy Ellis
