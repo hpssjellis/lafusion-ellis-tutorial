@@ -4,7 +4,7 @@ LA-Fusion Bootcamp Tutorial by Jeremy Ellis
 Sensor Fusion Tutoria
 
 1. Intro Jeremy Ellis High School Teacher Github Profile  [hpssjellis](https://github.com/hpssjellis)
-2. Decade of both tinyML Robotics teaching [Maker100 Leaders Robotics](https://github.com/hpssjellis/maker100-leaders-robotics)
+2. Decade of both tinyML Robotics teaching [Maker100 Leaders Robotics Intro Webpage](https://hpssjellis.github.io/maker100-leaders-robotics/index.html)
 3. And WebAI Interests [beginner-tensorflowJS](https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/)
 4. Combined to make the Github Organization [webmcu-ai](https://webmcu-ai.github.io/)
 5. If watching the videos: Video 1: [LAFusion Intro](https://www.youtube.com/watch?v=f8gqk5p4nS0&list=PLHo7Bx0zIrrA&index=1&pp=iAQB)
