@@ -8,6 +8,8 @@ This page is at
 
 Sensor Fusion Tutorial By Jeremy Ellis
 
+As AI and automation rapidly reshape every modern career path, foundational digital literacy requires looking beyond cloud black boxes to understand how physical hardware and client-side intelligence actually connect.
+
 1. Intro Jeremy Ellis High School Teacher Github Profile  [hpssjellis](https://github.com/hpssjellis)
 2. Decade of both tinyML Robotics teaching [Maker100 Leaders Robotics Intro Webpage](https://hpssjellis.github.io/maker100-leaders-robotics/index.html)
 3. And WebAI Solutions [beginner-tensorflowJS](https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/) This page is about 6 years old or older.
