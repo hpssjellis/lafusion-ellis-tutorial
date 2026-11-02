@@ -1,0 +1,332 @@
+
+<h1>Sensor Fusion Tutorial: Machine Learning at the Edge. LAFusion Bootcamp, By Jeremy Ellis</h1>
+
+Welcome to the LAFusion 2026 Bootcamp! As AI and automation rapidly reshape every modern career path, foundational digital literacy requires looking beyond cloud black boxes to understand how physical hardware and client-side intelligence actually connect. This page is the whole tutorial: slides, videos and every link you need.<br>
+The tools you will see come from webmcu-ai, open-source projects that show the whole machine-learning pipeline, from sensor to decision. The repositories are at <a href="https://github.com/webmcu-ai">https://github.com/webmcu-ai</a><br>
+This page is at <a href="https://hpssjellis.github.io/lafusion-ellis-tutorial/index.html">https://hpssjellis.github.io/lafusion-ellis-tutorial/index.html</a><br><br>
+
+<h2>At a glance: sensors in, decisions out, the whole pipeline visible</h2>
+<ul>
+  <li><b>The big idea:</b> look inside the box. Single-file firmware and single-file webpages let you read every stage of the pipeline: sensors, features, model, decision, action. You can inspect it, change it and explain it.</li>
+  <li><b>My path:</b> a decade of TinyML and robotics teaching (Maker100 Leaders Robotics), then WebAI solutions that run as plain web pages (beginner TensorFlow.js examples), then both combined in the GitHub organization <a href="https://webmcu-ai.github.io/">webmcu-ai</a>.</li>
+  <li><b>What you need:</b> a laptop with Chrome or Edge and a curious mind. A board is a bonus, not a requirement: the five videos in the playlist show every step.</li>
+  <li><b>The videos:</b> watch them in order. Video 5, sensor fusion with the Nano 33 BLE Sense and a webpage for ML training, is probably the most important one.</li>
+  <li><b>Context:</b> this tutorial connects hands-on classroom projects with LAFusion's interest in information fusion and sensor fusion. The on-device ideas are described in two open arXiv preprints (<a href="https://arxiv.org/abs/2604.23012">2604.23012</a>, <a href="https://arxiv.org/abs/2604.22834">2604.22834</a>).</li>
+  <li><b>Contact:</b> questions, ideas and collaborations are very welcome: <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis on LinkedIn</a></li>
+</ul>
+<p>My tools are not better than professional tools, and they might have some issues. What they offer is a pipeline you can see from start to finish, and a starting point you can make your own. Let's look inside the box!</p>
+
+
+
+<div id="myMain">
+
+
+<h1>Sensor Fusion Tutorial. LAFusion Bootcamp, By Jeremy Ellis</h1>
+
+<h3><a name="1" href="#1">1 </a> <br><br> Hi, I'm Jeremy Ellis: High School Teacher and Builder</h3>
+<h2>I like to look inside the box, and I want students to be able to do the same.</h2>
+
+<img height="440" alt="Who am I" src="./media/slide-03-who.png" />
+
+<br><br><details open><summary><b>I'm a British Columbia technology teacher with about 35 years in the classroom, building open tools for WebAI, TinyML and robotics.</b></summary>
+
+My GitHub profile is <a href="https://github.com/hpssjellis">hpssjellis</a>. I founded the webmcu-ai GitHub organization to explore readable, open-source machine-learning pipelines, and I have been lucky to share this work at the TinyML for Sustainable Development workshop in São Paulo (July 2024). It is wonderful to be back in Brazil!<br><br>
+My message today is simple and optimistic: when you can read the code from the sensor to the decision, you can understand it, test it and make it your own.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="2" href="#2">2 </a> <br><br> A Decade of TinyML and Robotics Teaching</h3>
+<h2>Maker100 Leaders Robotics: a free, open-source high school robotics, AI and IoT course.</h2>
+
+<img height="350" alt="Maker100 Leaders Robotics" src="./media/slide-04-course-v2.png" />
+
+<br><br><details open><summary><b>Start here: <a href="https://hpssjellis.github.io/maker100-leaders-robotics/index.html">Maker100 Leaders Robotics Intro Webpage</a></b></summary>
+
+For about ten years I have taught TinyML and robotics with small, low-cost microcontrollers. In Maker100, students solve many real robotics, sensor, actuator, ML and IoT challenges, then teach their solutions to others.<br><br>
+The course repository is at <a href="https://github.com/hpssjellis/maker100-leaders-robotics">github.com/hpssjellis/maker100-leaders-robotics</a>
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="3" href="#3">3 </a> <br><br> And WebAI Solutions</h3>
+<h2>Machine learning that runs as a plain web page, right in the browser.</h2>
+
+<br><br><details open><summary><b>Beginner TensorFlow.js examples: <a href="https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/">beginner-tensorflowJS</a></b></summary>
+
+This page is about 6 years old, or older, and it is where my WebAI work started. Every example is plain HTML and JavaScript, so a student can open it, read it and change it.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="4" href="#4">4 </a> <br><br> Combining TinyML and WebAI: webmcu-ai</h3>
+<h2>One GitHub organization where the browser and the microcontroller work together.</h2>
+
+<img height="440" alt="On-Device Machine Learning: Own the Pipeline" src="./media/slide-09-ondevice-ml-v3.png" />
+
+<br><br><details open><summary><b>Visit <a href="https://webmcu-ai.github.io/">webmcu-ai.github.io</a> and the repositories at <a href="https://github.com/webmcu-ai">github.com/webmcu-ai</a></b></summary>
+
+I combined TinyML and WebAI so that a web page can collect data, train a model and talk to the board, while the firmware stays a single readable file. Inspired by Vijay Reddi's tinyTorch and <a href="https://mlsysbook.ai/">mlsysbook.ai</a>, I adapted this philosophy into Arduino-compatible code with help from LLMs.<br><br>
+The ideas are described in two open preprints: <a href="https://arxiv.org/abs/2604.23012">2604.23012</a> and <a href="https://arxiv.org/abs/2604.22834">2604.22834</a>.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="5" href="#5">5 </a><br><br> Video 1: LAFusion Intro</h3>
+<h2>If you are watching the videos, start here.</h2>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Video 1: LAFusion Intro</p>
+            <div id="myVid1" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/f8gqk5p4nS0?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/f8gqk5p4nS0/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+<br>
+<a href="https://www.youtube.com/watch?v=f8gqk5p4nS0&list=PLHo7Bx0zIrrA&index=1&pp=iAQB">Open Video 1 on YouTube</a>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="6" href="#6">6 </a><br><br> Video 2: Test Your Board with the Webtool-kit</h3>
+<h2>Check that your board and your browser can talk to each other.</h2>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Video 2: Test your board using the Webtool-kit</p>
+            <div id="myVid2" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/Pi_7AAncaW0?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/Pi_7AAncaW0/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+<br>
+<a href="https://www.youtube.com/watch?v=Pi_7AAncaW0&list=PLHo7Bx0zIrrA&index=2&pp=iAQB">Open Video 2 on YouTube</a>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="7" href="#7">7 </a><br><br> Video 3: My GitHub Organization webmcu-ai</h3>
+<h2>A tour of the open-source projects that combine TinyML and WebAI.</h2>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Video 3: my GitHub Organization WebMCU-AI</p>
+            <div id="myVid3" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/unCKu32qVvg?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/unCKu32qVvg/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+<br>
+<a href="https://www.youtube.com/watch?v=unCKu32qVvg&list=PLHo7Bx0zIrrA&index=3&pp=iAQB">Open Video 3 on YouTube</a>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="8" href="#8">8 </a><br><br> Video 4: My High School Robotics AI IoT Course</h3>
+<h2>Maker100 Leaders Robotics, the course behind the tools.</h2>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Video 4: My High School Robotics AI IoT course Maker100 Leaders Robotics</p>
+            <div id="myVid4" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/RvL4VTN949g?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/RvL4VTN949g/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+<br>
+<a href="https://www.youtube.com/watch?v=RvL4VTN949g&list=PLHo7Bx0zIrrA&index=4&pp=iAQB">Open Video 4 on YouTube</a>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="9" href="#9">9 </a><br><br> Video 5: Sensor Fusion with the Nano 33 BLE Sense</h3>
+<h2>Probably the most important video: many imperfect sensors, one webpage for ML training.</h2>
+
+        <div style="width: 640px; text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 8px; color: #333;">Video 5: Sensor Fusion with the Nano33BleSense and a webpage for ML training</p>
+            <div id="myVid5" onclick="this.innerHTML='<iframe  width=640 height=360  src=\'https://www.youtube.com/embed/dSBqbDrsu90?autoplay=1\' frameborder=0 allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"
+                style="width: 640px; height: 360px; background: #000; cursor: pointer; position: relative;">
+                <img src="https://img.youtube.com/vi/dSBqbDrsu90/mqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:40px;background:rgba(0,0,0,0.7);color:#fff;text-align:center;line-height:40px;border-radius:8px;font-size:20px;">▶</div>
+            </div>
+        </div>
+
+<br><br><details open><summary><b>No single sensor tells the whole story. Fusion is how a small board gets a bigger picture.</b></summary>
+
+The Arduino Nano 33 BLE Sense carries many sensors at once: motion, magnetic field, pressure, temperature, humidity, light, color, proximity, gesture and sound. Each one is noisy and limited. Together they can describe what is going on much more reliably.<br><br>
+<a href="https://www.youtube.com/watch?v=dSBqbDrsu90&list=PLHo7Bx0zIrrA&index=5&pp=iAQB">Open Video 5 on YouTube</a>
+
+</details>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="10" href="#10">10 </a><br><br> Exit: Your Starting Point, Not a Finished Product</h3>
+<h2>The entire pipeline is visible, so you can make your own projects, products or solutions.</h2>
+
+<br><br><details open><summary><b>My tools are not better than professional tools, and they might have some issues.</b></summary>
+
+What they offer is a pipeline you can see from start to finish, using single-file firmware or webpages. Students can take these starting points and make their own projects, products or solutions.<br><br>
+If you would like to talk about sensor fusion, TinyML or WebAI in the classroom, message me on LinkedIn: <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">https://ca.linkedin.com/in/jeremy-ellis-4237a9bb</a><br><br>
+Thank you, obrigado, and happy building! Use at your own risk.
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+
+<h3><a name="11" href="#11">11 </a><br><br> Links, Videos and Resources</h3>
+<h2>Explore the projects, code and demonstrations behind the tutorial, and keep building after the bootcamp.</h2>
+
+<br>
+QR code to this presentation:<br>
+<img height="300" alt="QR code, scan to open presentation" src="https://github.com/user-attachments/assets/278f9cd8-ce09-4971-a3af-5102d1b5181d" />
+<br><br>
+
+<details open><summary><b>Resources</b></summary>
+
+<br>
+
+<li><a href="https://hpssjellis.github.io/lafusion-ellis-tutorial/index.html">This Presentation Webpage</a></li>
+  <li><a href="https://lafusion.cos.ufrj.br/#bootcamp">LAFusion Bootcamp</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLHo7Bx0zIrrA">LAFusion Video Playlist (Videos 1 to 5)</a></li>
+<li><a href="https://github.com/hpssjellis">Jeremy Ellis Github Profile</a></li>
+<li><a href="https://hpssjellis.github.io/maker100-leaders-robotics/index.html">Maker100 Leaders Robotics Intro Webpage</a></li>
+<li><a href="https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/">beginner-tensorflowJS (about 6 years old or older)</a></li>
+  <br>
+<li><a href="https://webmcu-ai.github.io/">webmcu-ai: TinyML and WebAI combined</a></li>
+<li><a href="https://github.com/webmcu-ai">webmcu-ai on Github</a></li>
+<li><a href="https://arxiv.org/abs/2604.23012">arXiv 2604.23012 Pre-Print Paper 1 on-device</a></li>
+<li><a href="https://arxiv.org/abs/2604.22834">arXiv 2604.22834 Pre-Print Paper 2 web Training Assist</a></li>
+  <br>
+<li><a href="https://www.linkedin.com/in/jeremy-ellis-4237a9bb/">Jeremy Ellis LinkedIn</a></li>
+  
+<hr>
+
+  
+</details>
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+<a name="resources">Resources</a>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Link / Details</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Author</strong></td>
+      <td> <a href="https://ca.linkedin.com/in/jeremy-ellis-4237a9bb">Jeremy Ellis LinkedIn Profile</a></td>
+      <td><em>Questions and collaborations welcome</em></td>
+    </tr>
+    <tr>
+      <td><strong>LAFusion Bootcamp</strong></td>
+      <td><a href="https://lafusion.cos.ufrj.br/#bootcamp">lafusion.cos.ufrj.br</a></td>
+      <td>Machine Learning at the Edge: A Hands-on Walkthrough</td>
+    </tr>
+    <tr>
+      <td><strong>This Tutorial</strong></td>
+      <td><a href="https://hpssjellis.github.io/lafusion-ellis-tutorial/index.html">lafusion-ellis-tutorial</a></td>
+      <td>Sensor Fusion Tutorial by Jeremy Ellis. Use at your own risk.</td>
+    </tr>
+    <tr>
+      <td><strong>Video Playlist</strong></td>
+      <td><a href="https://www.youtube.com/playlist?list=PLHo7Bx0zIrrA">LAFusion Video Playlist</a></td>
+      <td>Five videos. Video 5 (sensor fusion with the Nano 33 BLE Sense) is probably the most important</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub Profile</strong></td>
+      <td><a href="https://github.com/hpssjellis">github.com/hpssjellis</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>Maker100 Intro Webpage</strong></td>
+      <td><a href="https://hpssjellis.github.io/maker100-leaders-robotics/index.html">maker100-leaders-robotics</a></td>
+      <td>A decade of TinyML and robotics teaching</td>
+    </tr>
+    <tr>
+      <td><strong>WebAI Solutions</strong></td>
+      <td><a href="https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/">beginner-tensorflowJS</a></td>
+      <td>About 6 years old or older</td>
+    </tr>
+    <tr>
+      <td><strong>On-Device webmcu-ai</strong></td>
+      <td><a href="https://github.com/webmcu-ai">github.com/webmcu-ai</a></td>
+      <td>arXiv Papers: <a href="https://arxiv.org/abs/2604.23012">2604.23012</a> &amp; <a href="https://arxiv.org/abs/2604.22834">2604.22834</a></td>
+    </tr>
+    <tr>
+      <td><strong>Browser-to-device vision ML demo</strong></td>
+      <td><a href="https://webmcu-ai.github.io/webmcu-vision-pwa/index.html">webmcu-vision-pwa</a></td>
+      <td>On-device and webSerial Vision ML Training demo webpage and PWA</td>
+    </tr>
+    <tr>
+      <td><strong>The Course</strong></td>
+      <td><a href="https://github.com/hpssjellis/maker100-leaders-robotics">maker100-leaders-robotics</a></td>
+      <td>Project-based robotics course that builds pipeline understanding</td>
+    </tr>
+    <tr>
+      <td><strong>The Curriculum</strong></td>
+      <td><a href="https://github.com/hpssjellis/maker100-curriculum">maker100-curriculum</a></td>
+      <td>This is the generic curriculum on Github</td>
+    </tr>
+    <tr>
+      <td><strong>Hardware Price List</strong></td>
+      <td><a href="https://hpssjellis.github.io/maker100-leaders-robotics/price-list-2026.html">Hardware price-list-2026</a></td>
+      <td>The bare essential hardware.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+  
+
+<br><br><br><br><br><br><br><br><br>
+<hr>
+
+</div>
