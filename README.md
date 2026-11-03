@@ -14,7 +14,7 @@ As AI and automation rapidly reshape every modern career path, foundational digi
 2. Decade of both tinyML Robotics teaching [Maker100 Leaders Robotics Intro Webpage](https://hpssjellis.github.io/maker100-leaders-robotics/index.html)
 3. And WebAI Solutions [beginner-tensorflowJS](https://hpssjellis.github.io/beginner-tensorflowjs-examples-in-javascript/) This page is about 6 years old or older.
 4. I combined TinyML and WebAI to make the Github Organization [webmcu-ai](https://webmcu-ai.github.io/)
-5. Let's do this live demo on our cellphones. No Saving folder, Add your classes, ceiling, chair, feet. 30 images each class, train, test. Demo at: [https://webmcu-ai.github.io/on-device-vision-and-web/](https://webmcu-ai.github.io/on-device-vision-and-web/)
+5. Let's do this live vision CNN demo on our cellphones. No Saving folder, add your classes: ```ceiling, chair, feet```. Set 300 ms for multi-burst, Start camera, 30 images each class, train, test. Demo at: [https://webmcu-ai.github.io/on-device-vision-and-web/](https://webmcu-ai.github.io/on-device-vision-and-web/)
 6. If watching the videos: Video 1: [LAFusion Intro](https://www.youtube.com/watch?v=f8gqk5p4nS0&list=PLHo7Bx0zIrrA&index=1&pp=iAQB)
 7. Video 2: [Test your board using the Webtool-kit](https://www.youtube.com/watch?v=Pi_7AAncaW0&list=PLHo7Bx0zIrrA&index=2&pp=iAQB)
 8. Video 3: [my Github Organization WebMCU-AI](https://www.youtube.com/watch?v=unCKu32qVvg&list=PLHo7Bx0zIrrA&index=3&pp=iAQB)
