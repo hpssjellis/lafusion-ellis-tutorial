@@ -1,7 +1,7 @@
 # lafusion-ellis-tutorial
 LA-Fusion Bootcamp Tutorial by Jeremy Ellis
 
-This page is at 
+This page is at [https://github.com/hpssjellis/lafusion-ellis-tutorial/blob/main/README.md](https://github.com/hpssjellis/lafusion-ellis-tutorial/blob/main/README.md)
 
 <img width="243" height="244" alt="image" src="https://github.com/user-attachments/assets/278f9cd8-ce09-4971-a3af-5102d1b5181d" />
 
